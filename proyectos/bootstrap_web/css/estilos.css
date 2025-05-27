@@ -1,0 +1,95 @@
+@font-face {
+    font-family: "cris";
+    src: url("https://mdn.github.io/css-examples/web-fonts/VeraSeBd.ttf");
+}
+
+.movil {
+    width: 150px;
+}
+
+.tablet {
+    width: 130px;
+}
+
+.ordenador {
+    width: 300px;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-1 {
+    background-image: url("../img/imagen_uno.jpg");
+}
+
+.img-2 {
+    background-image: url("../img/imagen_dos.jpg");
+}
+
+.img-3 {
+    background-image: url("../img/imagen_tres.jpg");
+}
+
+.margen-sup {
+    margin-top: 200px;
+}
+
+video {
+    width: 95%;
+}
+
+.texto-menu {
+    font-size: 1.5em;
+}
+
+.menu:hover {
+    color: #000000;
+    transform: scale(1.1);
+
+}
+
+.visibilidad {
+    color: #565342;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15), 0 0 25px rgba(0, 0, 0, 0.1);
+
+}
+
+@keyframes aparecer {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.aparecer {
+    animation: aparecer 3s ease-in-out;
+}
+
+.fondo {
+    background-image: url(../img/fondo.jpg);
+}
+
+h5:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-family: cris;
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.otrofondo {
+    background-image: url(../img/otrofondo.jpg);
+}
