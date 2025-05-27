@@ -11,7 +11,111 @@
 </head>
 
 <body>
-    <h1>Hola mundo</h1>
+    <!-- HEADER/NAVBAR -->
+  <header class="bg-dark text-white py-3 sticky-top">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="h3 mb-0">Cristina Miralles</h1>
+      <nav>
+        <a href="#about" class="text-white me-3">Sobre mí</a>
+        <a href="#projects" class="text-white me-3">Proyectos</a>
+        <a href="#contact" class="text-white">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="bg-light text-center py-5">
+    <div class="container">
+      <h2 class="display-4">Cristina Miralles</h2>
+      <p class="lead">Diseñadora gráfica digital</p>
+    </div>
+  </section>
+
+  <!-- CONOCIMIENTOS -->
+  <section id="knowledge" class="py-5">
+  <div class="container">
+    <h3 class="mb-4">Conocimientos Técnicos</h3>
+  
+    <div class="mb-3">
+      <h5>1. Tipos de datos, estructuras y funciones</h5>
+      <ul>
+        <li>Tipos de datos: numéricos, cadenas, booleanos</li>
+        <li>Variables y operadores (aritméticos, lógicos y relacionales)</li>
+        <li>Estructuras de control:
+          <ul>
+            <li>Secuenciales: ejecución línea a línea</li>
+            <li>Selectivas: <code>if, else, switch</code></li>
+            <li>Repetitivas: <code>for, while</code></li>
+          </ul>
+        </li>
+        <li>Funciones: modularización del código en JavaScript</li>
+      </ul>
+    </div>
+
+    <!-- Ficheros -->
+    <div class="mb-3">
+      <h5>2. Ficheros</h5>
+      <p>Conozco cómo trabajar con ficheros (lectura/escritura) usando JavaScript del lado del cliente.</p>
+    </div>
+
+    <!-- Bases de datos -->
+    <div class="mb-3">
+      <h5>3. Bases de datos</h5>
+      <p>He estudiado distintos tipos de bases de datos:</p>
+      <ul>
+        <li>Jerárquicas</li>
+        <li>Relacionales: tablas, claves primarias/foráneas, SQL</li>
+        <li>Documentales</li>
+      </ul>
+      <p>También conozco el uso de <strong>SGBD</strong> (como SQLite) y el lenguaje <strong>SQL</strong> para consultas, creación de tablas, inserción de datos, etc.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- PROYECTOS -->
+  <section id="projects" class="bg-light py-5">
+    <div class="container">
+      <h3 class="mb-4">Proyectos</h3>
+      <!-- Filtros y botones para ordenar -->
+      <div class="mb-3">
+        <button class="btn btn-outline-primary me-2" onclick="filtrar('todos')">Todos</button>
+        <button class="btn btn-outline-secondary me-2" onclick="filtrar('js')">JavaScript</button>
+        <button class="btn btn-outline-success" onclick="ordenarProyectos()">Ordenar A-Z</button>
+      </div>
+      <!-- Galería de proyectos -->
+      <div class="row" id="project-list">
+        <!-- JS insertará las tarjetas aquí -->
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <h3 class="mb-4">Contacto</h3>
+      <form onsubmit="return validarFormulario(event)">
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required />
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">&copy; 2025 Cristina Miralles Calatayud. Todos los derechos reservados.</p>
+  </footer>
     
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
