@@ -92,10 +92,10 @@
       <h3 class="mb-4">Proyectos</h3>
       <!-- Filtros y botones para ordenar -->
 <div class="mb-3">
-      <button class="btn btn-outline-primary me-2" onclick="filtrar('todos')">Todos</button>
-      <button class="btn btn-outline-secondary me-2" onclick="filtrar('js')">JavaScript</button>
-      <button class="btn btn-outline-secondary me-2" onclick="filtrar('bootstrap')">Bootstrap</button>
-      <button class="btn btn-outline-success" onclick="ordenarProyectos()">Ordenar A-Z</button>
+      <button class="btn btn-outline-primary me-2" id="btn-todos">Todos</button>
+      <button class="btn btn-outline-secondary me-2" id="btn-wordpress">Wordpress</button>
+      <button class="btn btn-outline-secondary me-2" id="btn-js">Javascript</button>
+      <button class="btn btn-outline-secondary me-2" id="btn-bootstrap">Bootstrap</button>
     </div>
 
     <!-- Galería de proyectos -->
@@ -107,7 +107,7 @@
           <div class="card-body">
             <h5 class="card-title">Blog Personal con WordPress</h5>
             <p class="card-text">Sitio creado con WordPress que incluye entradas y personalización de tema.</p>
-            <a href="https://cmcristinadesign.wordpress.com/" target="_blank" class="btn btn-primary">Ver Sitio</a>
+            <a href="https://cmcristinadesign.wordpress.com/" target="_blank" class="btn btn-dark">Ver Sitio</a>
           </div>
         </div>
       </div>
@@ -119,7 +119,7 @@
           <div class="card-body">
             <h5 class="card-title">Web demo con JavaScript</h5>
             <p class="card-text">Sitio interactivo creado con JavaScript.</p>
-            <a href="proyectos/visor_imagenes/index.html" target="_blank" class="btn btn-primary">Ver Sitio</a>
+            <a href="proyectos/visor_imagenes/index.html" target="_blank" class="btn btn-dark">Ver Sitio</a>
           </div>
         </div>
       </div>
@@ -131,7 +131,7 @@
           <div class="card-body">
             <h5 class="card-title">Web demo con Bootstrap</h5>
             <p class="card-text">Sitio responsive creado con Bootstrap 5.</p>
-            <a href="proyectos/bootstrap_web/index.html" target="_blank" class="btn btn-primary">Ver Sitio</a>
+            <a href="proyectos/bootstrap_web/index.html" target="_blank" class="btn btn-dark">Ver Sitio</a>
           </div>
         </div>
       </div>
@@ -156,7 +156,7 @@
           <label for="mensaje" class="form-label">Mensaje</label>
           <textarea class="form-control" id="mensaje" rows="4" required></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Enviar</button>
+        <button type="submit" class="btn btn-dark">Enviar</button>
       </form>
     </div>
   </section>

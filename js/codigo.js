@@ -1,32 +1,26 @@
-// Filtro de proyectos por categoría
-function filtrar(categoria) {
-  if (categoria === "todos") {
-    mostrarProyectos(proyectos);
-  } else {
-    const filtrados = proyectos.filter(p => p.categoria === categoria);
-    mostrarProyectos(filtrados);
-  }
-}
+const btnTodos = document.getElementById("btn-todos");
+const btnWordpress = document.getElementById("btn-wordpress");
+const btnJS = document.getElementById("btn-js");
+const btnBootstrap = document.getElementById("btn-bootstrap");
+const proyectos = document.querySelectorAll(".proyecto");
 
-// Ordenar alfabéticamente
-function ordenarProyectos() {
-  const ordenados = [...proyectos].sort((a, b) => a.titulo.localeCompare(b.titulo));
-  mostrarProyectos(ordenados);
-}
+window.addEventListener("load", () => {
+  console.log("Inicio JS");
 
-// Validar formulario de contacto
-function validarFormulario(event) {
-  event.preventDefault();
-  const nombre = document.getElementById("nombre").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const mensaje = document.getElementById("mensaje").value.trim();
+btnTodos.addEventListener("click", () => filtrarProyectos("todos"));
+btnWordpress.addEventListener("click", () => filtrarProyectos("wordpress"));
+btnJS.addEventListener("click", () => filtrarProyectos("js"));
+btnBootstrap.addEventListener("click", () => filtrarProyectos("bootstrap"));
 
-  if (!nombre || !email || !mensaje) {
-    alert("Por favor, rellena todos los campos.");
-    return false;
-  }
+});
 
-  alert("¡Mensaje enviado correctamente!");
-  document.querySelector("form").reset();
-  return true;
+function filtrarProyectos(categoria) {
+  proyectos.forEach(proyecto => {
+    const cat = proyecto.dataset.categoria;
+    if (categoria === "todos" || cat === categoria) {
+      proyecto.style.display = "block";
+    } else {
+      proyecto.style.display = "none";
+    }
+  });
 }
