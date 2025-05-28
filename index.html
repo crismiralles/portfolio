@@ -9,6 +9,8 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -91,75 +93,77 @@
     <div class="container">
       <h3 class="mb-4">Proyectos</h3>
       <!-- Filtros y botones para ordenar -->
-<div class="mb-3">
-      <button class="btn btn-outline-primary me-2" id="btn-todos">Todos</button>
-      <button class="btn btn-outline-secondary me-2" id="btn-wordpress">Wordpress</button>
-      <button class="btn btn-outline-secondary me-2" id="btn-js">Javascript</button>
-      <button class="btn btn-outline-secondary me-2" id="btn-bootstrap">Bootstrap</button>
+      <div class="mb-3">
+        <button class="btn btn-outline-primary me-2" id="btn-todos">Todos</button>
+        <button class="btn btn-outline-secondary me-2" id="btn-wordpress">Wordpress</button>
+        <button class="btn btn-outline-secondary me-2" id="btn-js">Javascript</button>
+        <button class="btn btn-outline-secondary me-2" id="btn-bootstrap">Bootstrap</button>
+      </div>
+
+      <!-- Galería de proyectos -->
+      <div class="row" id="project-list">
+        <!-- Proyecto WordPress -->
+        <div class="col-md-4 mb-4 proyecto" data-categoria="wordpress">
+          <div class="card h-100 shadow-sm">
+            <img src="img/wordpress.png" class="card-img-top" alt="Captura del sitio WordPress">
+            <div class="card-body">
+              <h5 class="card-title">Blog Personal con WordPress</h5>
+              <p class="card-text">Sitio creado con WordPress que incluye entradas y personalización de tema.</p>
+              <a href="https://cmcristinadesign.wordpress.com/" target="_blank" class="btn btn-dark">Ver Sitio</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto JavaScript -->
+        <div class="col-md-4 mb-4 proyecto" data-categoria="js">
+          <div class="card h-100 shadow-sm">
+            <img src="img/visor_imagenes.png" class="card-img-top" alt="Captura del proyecto JavaScript">
+            <div class="card-body">
+              <h5 class="card-title">Web demo con JavaScript</h5>
+              <p class="card-text">Sitio interactivo creado con JavaScript.</p>
+              <a href="proyectos/visor_imagenes/index.html" target="_blank" class="btn btn-dark">Ver Sitio</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Proyecto Bootstrap -->
+        <div class="col-md-4 mb-4 proyecto" data-categoria="bootstrap">
+          <div class="card h-100 shadow-sm">
+            <img src="img/bootstrap.png" class="card-img-top" alt="Captura del proyecto Bootstrap">
+            <div class="card-body">
+              <h5 class="card-title">Web demo con Bootstrap</h5>
+              <p class="card-text">Sitio responsive creado con Bootstrap 5.</p>
+              <a href="proyectos/bootstrap_web/index.html" target="_blank" class="btn btn-dark">Ver Sitio</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <!-- Galería de proyectos -->
-    <div class="row" id="project-list">
-      <!-- Proyecto WordPress -->
-      <div class="col-md-4 mb-4 proyecto" data-categoria="wordpress">
-        <div class="card h-100 shadow-sm">
-          <img src="img/wordpress.png" class="card-img-top" alt="Captura del sitio WordPress">
-          <div class="card-body">
-            <h5 class="card-title">Blog Personal con WordPress</h5>
-            <p class="card-text">Sitio creado con WordPress que incluye entradas y personalización de tema.</p>
-            <a href="https://cmcristinadesign.wordpress.com/" target="_blank" class="btn btn-dark">Ver Sitio</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proyecto JavaScript -->
-      <div class="col-md-4 mb-4 proyecto" data-categoria="js">
-        <div class="card h-100 shadow-sm">
-          <img src="img/visor_imagenes.png" class="card-img-top" alt="Captura del proyecto JavaScript">
-          <div class="card-body">
-            <h5 class="card-title">Web demo con JavaScript</h5>
-            <p class="card-text">Sitio interactivo creado con JavaScript.</p>
-            <a href="proyectos/visor_imagenes/index.html" target="_blank" class="btn btn-dark">Ver Sitio</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- Proyecto Bootstrap -->
-      <div class="col-md-4 mb-4 proyecto" data-categoria="bootstrap">
-        <div class="card h-100 shadow-sm">
-          <img src="img/bootstrap.png" class="card-img-top" alt="Captura del proyecto Bootstrap">
-          <div class="card-body">
-            <h5 class="card-title">Web demo con Bootstrap</h5>
-            <p class="card-text">Sitio responsive creado con Bootstrap 5.</p>
-            <a href="proyectos/bootstrap_web/index.html" target="_blank" class="btn btn-dark">Ver Sitio</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- CONTACTO -->
   <section id="contact" class="py-5">
-    <div class="container">
+    <div class="container text-center">
       <h3 class="mb-4">Contacto</h3>
-      <form onsubmit="return validarFormulario(event)">
-        <div class="mb-3">
-          <label for="nombre" class="form-label">Nombre</label>
-          <input type="text" class="form-control" id="nombre" required />
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" required />
-        </div>
-        <div class="mb-3">
-          <label for="mensaje" class="form-label">Mensaje</label>
-          <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-dark">Enviar</button>
-      </form>
+      <p>Puedes encontrarme en:</p>
+
+      <div class="d-flex justify-content-center gap-4 fs-3">
+        <a href="mailto:cmcristinamc@gmail.com" class="text-dark" title="Email">
+          <i class="bi bi-envelope-fill"></i>
+        </a>
+        <a href="https://www.behance.net/crismiralles" class="text-dark" title="Behance">
+          <i class="bi bi-behance"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/cristina-miralles/" class="text-dark" title="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/crismiralles" class="text-dark" title="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
     </div>
   </section>
+
 
   <!-- FOOTER -->
   <footer class="bg-dark text-white text-center py-3">
